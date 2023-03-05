@@ -1,0 +1,11 @@
+// базовые подключения
+@import "vars";
+@import "./base-scss/mixins";
+@import "./base-scss/fonts";
+@import "./base-scss/settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/footer";
+@import "./components/home/title"
+

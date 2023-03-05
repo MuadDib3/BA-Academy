@@ -1,0 +1,237 @@
+.title {
+
+  padding-top: 170px;
+  background-image: url(../../../img/home/title.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  &__flex-container {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 84px;
+  }
+
+  &__text {
+    flex-basis: 753px;
+    flex-shrink: 1;
+  }
+
+  &__galery {
+    flex-basis: 526px;
+    flex-shrink: 1;
+    display: grid;
+    grid-template-columns: 21.3% 73%;
+    grid-template-rows: 244px 300px;
+    grid-template-areas: "galery1 galery2"
+                         "galery3 galery3" ;
+    gap: 32px;
+
+  }
+}
+
+.text {
+
+  &__title {
+    margin-bottom: 32px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 85%;
+    color: #FFFFFF;
+  }
+
+  &__item {
+    width: 66%;
+    margin-bottom: 56px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__buttons-red {
+    padding: 12px 38px;
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  &__buttons-white {
+    padding: 12px 38px;
+    border: 1px solid #fff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+}
+
+
+.galery {
+
+  &__item {
+    &:first-child {
+      grid-area: galery1;
+      align-self: end;
+      justify-self: end;
+    }
+    &:nth-child(2) {
+      grid-area: galery2;
+    }
+    &:last-child {
+      grid-area: galery3;
+      max-width: 300px;
+      max-height: 300px;
+    }
+  }
+}
+
+
+@media (max-width: 950px) {
+  .title {
+
+    padding-top: 120px;
+
+    &__flex-container {
+      padding-bottom: 70px;
+    }
+
+		&__galery {
+
+      grid-template-rows: 185px 200px;
+      gap: 24px;
+    }
+}
+
+  .text {
+
+      &__title {
+        font-size: 80px;
+        margin-bottom: 26px;
+      }
+
+      &__item {
+        width: 100%;
+        margin-bottom: 48px;
+      }
+
+      &__buttons {
+        gap: 28px;
+      }
+
+      &__buttons-red {
+        padding: 12px 28px;
+      }
+
+      &__buttons-white {
+        padding: 12px 28px;
+      }
+  }
+  .galery {
+
+      &__item {
+        &:last-child {
+          max-width: 200px;
+          max-height: 200px;
+        }
+      }
+  }
+
+}
+
+@media (max-width: 650px) {
+  .title {
+
+    padding-top: 120px;
+
+    &__flex-container {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+		&__galery {
+      grid-template-rows: 185px 200px;
+      gap: 24px;
+      position: relative;
+      top: 40px;
+      left: 0;
+    }
+}
+
+  .text {
+
+      &__title {
+        font-size: 64px;
+        margin-bottom: 26px;
+      }
+
+      &__item {
+        width: 100%;
+        margin-bottom: 48px;
+      }
+
+      &__buttons {
+        justify-content: space-around;
+        gap: 8px;
+      }
+
+      &__buttons-red {
+        width: 155px;
+        padding: 12px 28px;
+        font-size: 13px;
+      }
+
+      &__buttons-white {
+        width: 155px;
+        padding: 12px 12px;
+        font-size: 13px;
+      }
+  }
+  .galery {
+
+      &__item {
+        &:last-child {
+          max-width: 200px;
+          max-height: 200px;
+        }
+      }
+  }
+
+}
+
+@media (max-width: 350px) {
+  .text {
+    &__buttons-red {
+      width: 130px;
+      font-size: 12px;
+      padding: 8px 8px;
+    }
+    &__buttons-white {
+      width: 130px;
+      font-size: 12px;
+      padding: 8px 8px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+footer {
+  padding: 24px 0;
+  background-color: var(--mid-gray);
+}
+
+.footer .nav {
+
+		&__list {
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+		&__item {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #FFFFFF;
+      &.nav__item_active {
+        font-weight: 700;
+      }
+    }
+
+}
+
+@media (max-width: 920px) {
+  .footer .nav__list {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer .nav__list {
+    flex-wrap: wrap;
+  }
+}
