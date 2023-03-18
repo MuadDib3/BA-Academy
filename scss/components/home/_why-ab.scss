@@ -1,0 +1,105 @@
+.why-ab {
+   padding: 184px 0;
+   background-color: rgb(248, 248, 248);
+   &__flex-container {
+      display: flex;
+      gap: 78px;
+      justify-content: space-between;
+      &:not(:last-child) {
+         margin-bottom: 72px;
+      }
+   }
+
+   &__title {
+      flex-basis: 678px;
+   }
+
+   &__descr {
+      flex-basis: 475px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+   }
+
+   &__flex-item {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 32px;
+      &:first-child {
+         flex-basis: 430px;
+      }
+      &:last-child {
+         flex-basis: 625px;
+      }
+   }
+
+   &__item {
+      display: flex;
+      gap: 24px;
+      flex-grow: 1;
+
+      picture {
+         flex-shrink: 0;
+         flex-basis: 55px;
+         height: 55px;
+
+      }
+      .image {
+         width: 55px;
+         height: 55px;
+
+      }
+   }
+
+   &__subtitles {
+      margin-bottom: 12px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+   }
+
+   &__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+   }
+}
+
+@media (max-width: 950px) {
+   .why-ab {
+      padding: 110px 0;
+   }
+   .why-ab__flex-container {
+      gap: 40px;
+   }
+}
+
+@media (max-width: 750px) {
+
+   .why-ab__flex-container {
+      display: block;
+      &:not(:last-child) {
+         margin-bottom: 0px;
+      }
+   }
+   .why-ab__title {
+      margin-bottom: 40px;
+   }
+   .why-ab__descr {
+      margin-bottom: 24px;
+   }
+   .why-ab__flex-item {
+      gap: 40px;
+      &:not(:last-child) {
+         margin-bottom: 40px;
+      }
+   }
+   .why-ab__item {
+      gap: 15px;
+   }
+}

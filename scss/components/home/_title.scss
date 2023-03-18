@@ -60,33 +60,6 @@
     gap: 40px;
   }
 
-  &__buttons-red {
-    padding: 12px 38px;
-    background-color: var(--red);
-    border: 1px solid var(--red);
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 140%;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-  }
-  &__buttons-white {
-    padding: 12px 38px;
-    border: 1px solid #fff;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 140%;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-  }
 }
 
 
@@ -141,15 +114,8 @@
       &__buttons {
         gap: 28px;
       }
-
-      &__buttons-red {
-        padding: 12px 28px;
-      }
-
-      &__buttons-white {
-        padding: 12px 28px;
-      }
   }
+
   .galery {
 
       &__item {
@@ -197,19 +163,8 @@
         justify-content: space-around;
         gap: 8px;
       }
-
-      &__buttons-red {
-        width: 155px;
-        padding: 12px 28px;
-        font-size: 13px;
-      }
-
-      &__buttons-white {
-        width: 155px;
-        padding: 12px 12px;
-        font-size: 13px;
-      }
   }
+
   .galery {
 
       &__item {
@@ -220,19 +175,4 @@
       }
   }
 
-}
-
-@media (max-width: 350px) {
-  .text {
-    &__buttons-red {
-      width: 130px;
-      font-size: 12px;
-      padding: 8px 8px;
-    }
-    &__buttons-white {
-      width: 130px;
-      font-size: 12px;
-      padding: 8px 8px;
-    }
-  }
 }

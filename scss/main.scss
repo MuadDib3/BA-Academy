@@ -10,22 +10,15 @@ body {
   color: var(--black);
 }
 
-.section-title {
-  font-family: 'Inter';
-  font-style: normal;
-  font-variation-settings: "wght" 700;
-  font-size: 48px;
-  line-height: 120%;
-  color: var(--black);
-  span {
-    color: var(--red);
-  }
-}
 
 // подключения компонентов страниц
 @import "./components/header";
 @import "./components/footer";
+@import "./components/components";
 @import "./components/home/title";
 @import "./components/home/why-study";
+@import "./components/home/who-for";
+@import "./components/home/right-course";
+@import "./components/home/why-ab";
 
 
