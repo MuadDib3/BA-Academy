@@ -1,0 +1,163 @@
+.what-learn {
+   padding: 184px 0;
+
+   &__title {
+      margin-bottom: 40px;
+   }
+
+   &__flex-container {
+      display: flex;
+      gap: 24px;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex-basis: 516px;
+   }
+
+   &__list-item {
+      background-color: var(--light-gray);
+      padding: 24px;
+      cursor: pointer;
+      position: relative;
+      span {
+         font-weight: 400;
+         font-size: 12px;
+         line-height: 140%;
+         letter-spacing: 0.1em;
+      }
+      h3 {
+         margin-top: 4px;
+         font-family: "Inter";
+         font-style: normal;
+         font-weight: 600;
+         font-size: 20px;
+         line-height: 140%;
+      }
+
+      &_active {
+         background-color: var(--dark-gray);
+         color: #fff;
+         &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translate(56px, -50%);
+            right: 0;
+            width: 56px;
+            height: 56px;
+            background-color: var(--dark-gray);
+            background-image: url(../img/home/arrow-what-learn.png);
+            background-position: 55% 50%;
+            background-repeat: no-repeat;
+            background-size: 24px 24px;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            z-index: 5;
+         }
+      }
+   }
+
+   &__item-descr, .what-learn__item-descr-750 {
+      display: none;
+      flex-basis: 568px;
+      ul {
+         padding: 24px 64px;
+         background-color: var(--light-gray);
+         min-height: 334px;
+         li {
+            position: relative;
+            margin-left: 15px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+         }
+
+         li:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: -15px;
+            height: 5px;
+            width: 5px;
+            background-color: var(--black);
+            border-radius: 5px;
+         }
+      }
+      p {
+         background-color: var(--red);
+         color: #fff;
+         padding: 24px 24px 24px 64px;
+         font-family: "Inter";
+         font-style: normal;
+         font-weight: 500;
+         font-size: 16px;
+         line-height: 140%;
+      }
+
+      &_active {
+         display: block;
+      }
+   }
+}
+
+@media (max-width: 1100px) {
+   .what-learn__title:after {
+      width: 40%;
+   }
+}
+
+@media (max-width: 750px) {
+   .what-learn__title:after {
+      display: none;
+   }
+   .what-learn__list {
+      flex-basis: 100%;
+   }
+   .what-learn__list-item {
+      padding-right: 69px;
+      &::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         transform: translate(0, -50%) rotate(90deg);
+         right: 8px;
+         width: 56px;
+         height: 56px;
+         background-color: var(--mid-gray);
+         background-image: url(../img/home/arrow-what-learn.png);
+         background-position: 55% 50%;
+         background-repeat: no-repeat;
+         background-size: 24px 24px;
+         border-radius: 50%;
+         z-index: 5;
+      }
+   }
+   .what-learn__list-item.what-learn__list-item_active {
+      &::after {
+         content: "";
+         top: 100%;
+         right: 0;
+         transform: translate(0);
+         transform: rotate(90deg);
+         border-radius: 0;
+         border-top-right-radius: 50%;
+         border-bottom-right-radius: 50%;
+         background-color: var(--dark-gray);
+      }
+   }
+   //!---------------------------------temp-------------
+   .what-learn__item-descr_active {
+      display: none;
+   }
+}
+
+@media (max-width: 400px) {
+   .what-learn__list-item h3 {
+      font-size: 18px;
+   }
+}

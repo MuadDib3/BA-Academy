@@ -67,7 +67,7 @@
 
    &__descr-list {
       padding: 40px;
-      background: #eeeeee;
+      background: var(--light-gray);
       &:nth-child(1) {
          flex-basis: 25%;
       }
