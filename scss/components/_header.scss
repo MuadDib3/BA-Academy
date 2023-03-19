@@ -1,70 +1,104 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 24px 0;
-  background-color: var(--black);
-  z-index: 100;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 24px 0;
+   background-color: var(--black);
+   z-index: 100;
 }
 
 .header .nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 40px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-
-    &__img {
+   &__img {
       flex-basis: 163px;
       flex-shrink: 1;
-    }
+   }
 
-		&__list {
+   &__list {
       display: flex;
       gap: 40px;
       justify-content: flex-end;
-    }
+   }
 
-		&__item {
-      font-family: 'Inter';
+   &__item {
+      font-family: "Inter";
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 140%;
-      color: #FFFFFF;
+      color: #ffffff;
       &.nav__item_active {
-        font-weight: 700;
+         font-weight: 700;
       }
-    }
+   }
 }
 
-.header .burger {
-  @include burger;
-  display: none;
-  color: #FFFFFF;
+.menu-mobile {
+   color: #ffffff;
+   height: 0;
+   width: 161px;
+   margin: 0 auto;
+   transition: all 150ms ease-in-out;
+   overflow-y: scroll;
+   &.menu_active {
+      height: 100vh;
+      padding-top: 40px;
+      overflow-x: hidden;
+      .menu-mobile__nav {
+         display: flex;
+      }
+      .menu-mobile__burger {
+         display: block;
+      }
+   }
+   &__nav {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      .nav__item_active {
+         font-weight: 700;
+      }
+   }
+   &__nav-item {
+      font-size: 20px;
+   }
+   &__burger {
+      display: none;
+      margin-top: 40px;
+   }
+}
+
+.burger {
+   @include burger;
+   display: none;
+   color: #ffffff;
 }
 
 @media (max-width: 920px) {
-  .header .nav__list {
-    gap: 15px;
-  }
+   .header .nav__list {
+      gap: 15px;
+   }
 }
 
 @media (max-width: 750px) {
-  .header .nav__item {
-    font-size: 12px;
-  }
+   .header .nav__item {
+      font-size: 12px;
+   }
 }
 
 @media (max-width: 650px) {
-  .header .nav {
-    &__list {
-      display: none;
-    }
-  }
-  .header .burger {
-    display: block;
-  }
+   .header .nav {
+      &__list {
+         display: none;
+      }
+   }
+   .burger {
+      display: block;
+   }
 }
-
