@@ -4,10 +4,30 @@ footer {
 }
 
 .footer {
-   background-color: #1D1C1A;
-   &__flex-container {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-   }
+  background-color: #1d1c1a;
+  &__flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__copyright {
+    flex-basis: 30%;
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    text-decoration: underline;
+  }
+  &__cookies {
+    flex-basis: 35%;
+    color: #fff;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__flex-container {
+    flex-direction: column;
+  }
 }
